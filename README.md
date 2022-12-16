@@ -1,70 +1,184 @@
-# Getting Started with Create React App
+1. Run Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+$ cd project
+$ cd backend
+$ npm install
+$ npm start
 
-## Available Scripts
+2. Run Frontend
 
-In the project directory, you can run:
+# open new terminal
+$ cd project
+$ cd frontend
+$ npm install
+$ npm start
 
-### `npm start`
+3. Order of project development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+List Products
 
-### `npm run build`
+    create products array
+    add product images
+    render products
+    style products
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add page routing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm i react-router-dom
+    create route for home screen
+    create router for product screen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create Node.JS Server
 
-### `npm run eject`
+    run npm init in root folder
+    Update package.json set type: module
+    Add .js to imports
+    npm install express
+    create server.js
+    add start command as node backend/server.js
+    require express
+    create route for / return backend is ready.
+    move products.js from frontend to backend
+    create route for /api/products
+    return products
+    run npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Fetch Products From Backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    set proxy in package.json
+    npm install axios
+    use state hook
+    use effect hook
+    use reducer hook
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Manage State By Reducer Hook
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    define reducer
+    update fetch data
+    get state from usReducer
 
-## Learn More
+Add bootstrap UI Framework
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm install react-bootstrap bootstrap
+    update App.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create Product and Rating Component
 
-### Code Splitting
+    create Rating component
+    Create Product component
+    Use Rating component in Product component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create Product Details Screen
 
-### Analyzing the Bundle Size
+    fetch product from backend
+    create 3 columns for image, info and action
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create Loading and Message Component
 
-### Making a Progressive Web App
+    create loading component
+    use spinner component
+    craete message component
+    create utils.js to define getError fuction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create React Context For Add Item To Cart
 
-### Advanced Configuration
+    Create React Context
+    define reducer
+    create store provider
+    implement add to cart button click handler
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Complete Add To Cart
 
-### Deployment
+    check exist item in the cart
+    check count in stock in backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create Cart Screen
 
-### `npm run build` fails to minify
+    create 2 columns
+    display items list
+    create action column
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Complete Cart Screen
+
+    click handler for inc/dec item
+    click handler for remove item
+    click handler for checkout
+
+Create Signin Screen
+
+    create sign in form
+    add email and password
+    add signin button
+
+Connect To MongoDB Database
+
+    create atlas monogodb database
+    npm install mongoose
+    connect to mongodb database
+
+Seed Sample Products
+
+    create Product model
+    create seed route
+    use route in server.js
+    seed sample product
+
+Seed Sample Users
+
+    create user model
+    seed sample users
+
+Create Signin Backend API
+
+    create signin api
+    npm install jsonwebtoken
+    define generateToken
+
+Complete Signin Screen
+
+    handle submit action
+    save token in store and local storage
+    show user name in header
+
+Create Shipping Screen
+
+    create form inputs
+    handle save shipping address
+    add checkout wizard bar
+
+Create Sign Up Screen
+
+    create input forms
+    handle submit
+    create backend api
+
+Implement Select Payment Method Screen
+
+    create input forms
+    handle submit
+
+Create Place Order Screen
+
+    show cart items, payment and address
+    calculate order summary
+
+Implement Place Order Action
+
+    handle place order action
+    create order create api
+
+Create Order Screen
+
+    create backend api for order/:id
+    fetch order api in frontend
+    show order information in 2 cloumns
+
+Create Profile Screen
+
+    get user info from context
+    show user information
+    create user update api
+    update user info
