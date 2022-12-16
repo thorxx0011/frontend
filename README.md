@@ -74,7 +74,7 @@ Create Product and Rating Component
 Create Product Details Screen
 
     fetch product from backend
-    create 3 columns for image, info and action
+    create columns for image, info and action
 
 Create Loading and Message Component
 
